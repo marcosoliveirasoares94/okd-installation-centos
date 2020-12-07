@@ -1,17 +1,11 @@
-
-
-
 # okd-installation-centos
 
 ![enter image description here](https://lh3.googleusercontent.com/OBGT85EIBjT43vxUsI0Pmhl68NmYxqOUbBuTjRivjP24t5r38ft0ioTNuEV0IAyV3izoadJsdYIlnw)
 
 # About...
 
-  
+*This repository is used to create ***OKD 3.11 Cluster*** with **9** simple steps on ***Bare VM's*** *
 
-*This repository is used to create ***OKD 3.11 Cluster*** with **9** simple steps on ***Bare VM's****
- 
-  
 
 # Table of Contents
 
@@ -20,9 +14,6 @@
 * [How to deploy okd cluster ?](#deploy)
 * [How to access okd Console ?](#console)
 * [What are the addons provided ?](#addons)
-
-  
-  
 
 <a id="prerequisites"></a>
 
@@ -40,13 +31,11 @@
 
 *Name*|*IP*|*OS*|*RAM*|*CPU*|
 |----|----|----|----|----|
-*okd-master-node*    |*100.10.10.100*|*CentOS7*|*16GB*|*4*|
-*okd-worker-node-1* |*100.10.10.101*|*CentOS7*|*16GB*|*4*|
-*okd-worker-node-2* |*100.10.10.102*|*CentOS7*|*16GB*|*4*|
-*okd-worker-node-3* |*100.10.10.103*|*CentOS7*|*16GB*|*4*|
-*okd-infra-node-1*     |*100.10.10.104*|*CentOS7*|*16GB*|*4*|
-
-  
+*okd-master-node-1*    |*100.10.10.100*|*CentOS7*|*16GB*|*4*|
+*okd-infra-node-1*     |*100.10.10.101*|*CentOS7*|*16GB*|*4*|
+*okd-worker-node-1*    |*100.10.10.102*|*CentOS7*|*16GB*|*4*|
+*okd-worker-node-2*    |*100.10.10.103*|*CentOS7*|*16GB*|*4*|
+*okd-worker-node-3*    |*100.10.10.104*|*CentOS7*|*16GB*|*4*|
   
 
 <a id="deploy"></a>
@@ -58,11 +47,11 @@
  
 ***Update the system and host names for all nodes***
 
-* `100.10.10.100 (okd-master-node)`
-* `100.10.10.101 (okd-worker-node-1)`
-* `100.10.10.102 (okd-worker-node-2)`
-* `100.10.10.103 (okd-worker-node-3)`
-* `100.10.10.104 (okd-infra-node-1)`
+* `100.10.10.100 (okd-master-node-1)`
+* `100.10.10.101 (okd-infra-node-1)`
+* `100.10.10.102 (okd-worker-node-1)`
+* `100.10.10.103 (okd-worker-node-2)`
+* `100.10.10.104 (okd-worker-node-3)`
   
 ***Unix Command!!!***
 
@@ -74,11 +63,11 @@
 
   ***Enable SELINUX=enforcing on all master/worker/infra nodes***
   
-* `100.10.10.100 (okd-master-node)`
-* `100.10.10.101 (okd-worker-node-1)`
-* `100.10.10.102 (okd-worker-node-2)`
-* `100.10.10.103 (okd-worker-node-3)`
-* `100.10.10.104 (okd-infra-node-1)`
+* `100.10.10.100 (okd-master-node-1)`
+* `100.10.10.101 (okd-infra-node-1)`
+* `100.10.10.102 (okd-worker-node-1)`
+* `100.10.10.103 (okd-worker-node-2)`
+* `100.10.10.104 (okd-worker-node-3)`
 
 ***Unix Command!!!***
 
@@ -93,11 +82,11 @@
 
   ***Reboot all master/worker/infra nodes***
  
-* `100.10.10.100 (okd-master-node)`
-* `100.10.10.101 (okd-worker-node-1)`
-* `100.10.10.102 (okd-worker-node-2)`
-* `100.10.10.103 (okd-worker-node-3)`
-* `100.10.10.104 (okd-infra-node-1)`
+* `100.10.10.100 (okd-master-node-1)`
+* `100.10.10.101 (okd-infra-node-1)`
+* `100.10.10.102 (okd-worker-node-1)`
+* `100.10.10.103 (okd-worker-node-2)`
+* `100.10.10.104 (okd-worker-node-3)`
  
 ***Unix Command!!!***
 
@@ -115,11 +104,11 @@
 ***Copy "okd-installation-centos" folder to all master/worker nodes***
 
   
-* `100.10.10.100 (okd-master-node)`
-* `100.10.10.101 (okd-worker-node-1)`
-* `100.10.10.102 (okd-worker-node-2)`
-* `100.10.10.103 (okd-worker-node-3)`
-* `100.10.10.104 (okd-infra-node-1)`
+* `100.10.10.100 (okd-master-node-1)`
+* `100.10.10.101 (okd-infra-node-1)`
+* `100.10.10.102 (okd-worker-node-1)`
+* `100.10.10.103 (okd-worker-node-2)`
+* `100.10.10.104 (okd-worker-node-3)`
 
 *Example copy to root folder and execution permissions can be applied by executing the below command.*
  
@@ -133,11 +122,11 @@
 
 ***Execute the below script on all master/worker/infra nodes***
 
-* `100.10.10.100 (okd-master-node)`
-* `100.10.10.101 (okd-worker-node-1)`
-* `100.10.10.102 (okd-worker-node-2)`
-* `100.10.10.103 (okd-worker-node-3)`
-* `100.10.10.104 (okd-infra-node-1)`
+* `100.10.10.100 (okd-master-node-1)`
+* `100.10.10.101 (okd-infra-node-1)`
+* `100.10.10.102 (okd-worker-node-1)`
+* `100.10.10.103 (okd-worker-node-2)`
+* `100.10.10.104 (okd-worker-node-3)`
 
 ***Unix Command!!!***
 
@@ -148,29 +137,29 @@
 
 ***Enable SSH to communicate all the other "worker/infra nodes" from "master" with out "password". All the below commands needs to be executed on "master" node only***
 
-* `100.10.10.101 (okd-master-node)`
+* `100.10.10.101 (okd-master-node-1)`
   
 ***Unix Command!!!***
 
 `$ ssh-keygen -t rsa`
 
-***okd-master-node***
+***okd-master-node-1***
 
 `$ cat ~/.ssh/id_rsa.pub | ssh   root@100.10.10.100  "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"`
 
-***okd-worker-node-1***
+***okd-infra-node-1***
 
 `$ cat ~/.ssh/id_rsa.pub | ssh   root@100.10.10.101  "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"`
 
-***okd-worker-node-2***
+***okd-worker-node-1***
 
 `$ cat ~/.ssh/id_rsa.pub | ssh   root@100.10.10.102  "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"`
 
-***okd-worker-node-3***
+***okd-worker-node-2***
 
 `$ cat ~/.ssh/id_rsa.pub | ssh   root@100.10.10.103  "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"`
 
-***okd-infra-node-4***
+***okd-worker-node-3***
 
 `$ cat ~/.ssh/id_rsa.pub | ssh   root@100.10.10.104  "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"`
 
@@ -178,7 +167,7 @@
 
 ***Execute the below script only on master node***
 
-* `100.10.10.101 (okd-master-node)`
+* `100.10.10.101 (okd-master-node-1)`
   
 ***Unix Command!!!***
 
